@@ -22,3 +22,14 @@ function reduceToTotal(sourceArray, startingPoint = 0) {
     };
     return sourceArray.reduce(reducer, startingPoint);
 }
+
+function reduceToAllTrue(sourceArray) {
+    const reducer = function(accumulator, currentValue){
+        if(!!accumulator == true && !!currentValue == true){
+            return true;
+        } else {
+            return false;
+        }
+    }
+    return sourceArray.reduce(reducer, true)
+}
