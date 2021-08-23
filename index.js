@@ -33,3 +33,14 @@ function reduceToAllTrue(sourceArray) {
     }
     return sourceArray.reduce(reducer, true)
 }
+
+function reduceToAnyTrue(sourceArray) {
+    const reducer = function(accumulator, currentValue){
+        if(!!accumulator == true){
+            return true
+        } else {
+            return !!currentValue
+        }
+    }
+    return sourceArray.reduce(reducer, false)
+}
