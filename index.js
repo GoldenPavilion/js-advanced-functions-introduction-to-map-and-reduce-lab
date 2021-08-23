@@ -15,3 +15,10 @@ function mapToDouble(sourceArray) {
 function mapToSquare(sourceArray) {
     return sourceArray.map(x => x * x);
 }
+
+function reduceToTotal(sourceArray, startingPoint = 0) {
+    const reducer = function(accumulator, currentValue){
+        return accumulator + currentValue
+    };
+    return sourceArray.reduce(reducer, startingPoint);
+}
